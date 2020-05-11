@@ -1,8 +1,2 @@
-aiohttp==1.0.5
-async-timeout==3.0.1
-chardet==3.0.4
 discord.py==0.16.12
-multidict==4.7.5
-pkg-resources==0.0.0
 senderscore==0.1.4
-websockets==3.4

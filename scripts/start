@@ -1,0 +1,21 @@
+#!/bin/bash -xe
+
+# Get app directory path
+export BOT_PATH="$(dirname $(pwd))"
+
+if [ ! -d "$BOT_PATH/.venv/" ]; then
+  # Create the virtualenv in case it not exists.
+  python3 -m venv .venv
+fi
+
+# Activate the virtualenv
+source $BOT_PATH/.venv/bin/activate
+
+# Setup the required enviroment variables
+source $BOT_PATH/.env
+
+# Install dependancies
+pip install -r $BOT_PATH/requirements.txt
+
+# Run bot
+nohup python -u $BOT_PATH/bot.py >& $BOT_PATH/log.txt < /dev/null &

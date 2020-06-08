@@ -2,4 +2,4 @@
 .venv/
 .vscode/
 nohup.out
-start.sh
+log.txt
